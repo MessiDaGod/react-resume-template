@@ -19,8 +19,9 @@
     "social":[
       {
         "name":"facebook",
-        "url":"http://facebook.com/tim.baker.906",
-        "className":"fa fa-facebook"
+        "url":"http://facebook.com/",
+        "className":"fa fa-facebook",
+        "target":"_blank"
       },
       {
         "name":"twitter",

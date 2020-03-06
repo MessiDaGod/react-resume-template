@@ -1,89 +1,117 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
 
 class Contact extends Component {
   render() {
-
-    if(this.props.data){
+    if (this.props.data) {
       var name = this.props.data.name;
       var street = this.props.data.address.street;
       var city = this.props.data.address.city;
       var state = this.props.data.address.state;
       var zip = this.props.data.address.zip;
-      var phone= this.props.data.phone;
+      var phone = this.props.data.phone;
       var email = this.props.data.email;
       var message = this.props.data.contactmessage;
     }
 
     return (
       <section id="contact">
+        <div className="row section-head">
+          <div className="two columns header-col">
+            <h1>
+              <span>Get In Touch.</span>
+            </h1>
+          </div>
 
-         <div className="row section-head">
+          <div className="ten columns">
+            <p className="lead">{message}</p>
+          </div>
+        </div>
 
-            <div className="two columns header-col">
+        <div className="row">
+          <div className="eight columns">
+            <form id="contactFormEn" name="sentMessageEn">
+              <fieldset>
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <input
+                        class="form-control"
+                        id="nameEn"
+                        name="name"
+                        type="text"
+                        placeholder="Your Name *"
+                        required="required"
+                        data-validation-required-message="Please enter your name."
+                      ></input>
+                      <p class="help-block text-danger"></p>
+                    </div>
+                    <div class="form-group">
+                      <input
+                        class="form-control"
+                        id="emailEn"
+                        name="email"
+                        type="email"
+                        placeholder="Your Email *"
+                        required="required"
+                        data-validation-required-message="Please enter your email address."
+                      ></input>
+                      <p class="help-block text-danger"></p>
+                    </div>
+                    <div class="form-group">
+                      <input
+                        class="form-control"
+                        id="phoneEn"
+                        name="phone"
+                        type="tel"
+                        placeholder="Your Phone *"
+                        required="required"
+                        data-validation-required-message="Please enter your phone number."
+                      ></input>
+                      <p class="help-block text-danger"></p>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <textarea
+                        class="form-control"
+                        id="messageEn"
+                        name="message"
+                        placeholder="Your Message *"
+                        required="required"
+                        data-validation-required-message="Please enter a message."
+                      ></textarea>
+                      <p class="help-block text-danger"></p>
+                    </div>
+                  </div>
+                  <div class="clearfix"></div>
+                  <div class="col-lg-12 text-center">
+                    <div id="successEn"></div>
+                    <button
+                      id="sendMessageButtonEn"
+                      class="btn btn-primary btn-lg"
+                      type="submit"
+                    >
+                      Send Message
+                    </button>
+                  </div>
+                </div>
+              </fieldset>
+            </form>
 
-               <h1><span>Get In Touch.</span></h1>
-
+            <div id="message-warning"> Error boy</div>
+            <div id="message-success">
+              <i className="fa fa-check"></i>Your message was sent, thank you!
+              <br />
             </div>
+          </div>
 
-            <div className="ten columns">
-
-                  <p className="lead">{message}</p>
-
-            </div>
-
-         </div>
-
-         <div className="row">
-            <div className="eight columns">
-
-               <form action="" method="post" id="contactForm" name="contactForm">
-					<fieldset>
-
-                  <div>
-						   <label htmlFor="contactName">Name <span className="required">*</span></label>
-						   <input type="text" defaultValue="" size="35" id="contactName" name="contactName" onChange={this.handleChange}/>
-                  </div>
-
-                  <div>
-						   <label htmlFor="contactEmail">Email <span className="required">*</span></label>
-						   <input type="text" defaultValue="" size="35" id="contactEmail" name="contactEmail" onChange={this.handleChange}/>
-                  </div>
-
-                  <div>
-						   <label htmlFor="contactSubject">Subject</label>
-						   <input type="text" defaultValue="" size="35" id="contactSubject" name="contactSubject" onChange={this.handleChange}/>
-                  </div>
-
-                  <div>
-                     <label htmlFor="contactMessage">Message <span className="required">*</span></label>
-                     <textarea cols="50" rows="15" id="contactMessage" name="contactMessage"></textarea>
-                  </div>
-
-                  <div>
-                     <button className="submit">Submit</button>
-                     <span id="image-loader">
-                        <img alt="" src="images/loader.gif" />
-                     </span>
-                  </div>
-					</fieldset>
-				   </form>
-
-           <div id="message-warning"> Error boy</div>
-				   <div id="message-success">
-                  <i className="fa fa-check"></i>Your message was sent, thank you!<br />
-				   </div>
-           </div>
-
-
-            <aside className="four columns footer-widgets">
+          {/* <aside className="four columns footer-widgets">
                <div className="widget widget_contact">
-
-					   <h4>Address and Phone</h4>
-					   <p className="address">
-						   {name}<br />
-						   {street} <br />
-						   {city}, {state} {zip}<br />
-						   <span>{phone}</span>
+                  <p className="address">
+						   <span>{name}</span><br />
+						   <span>{city} {state}, {zip}
+                   </span><br />
+                     <span>{email}</span>
 					   </p>
 				   </div>
 
@@ -108,9 +136,9 @@ class Contact extends Component {
                      </li>
                   </ul>
 		         </div>
-            </aside>
-      </div>
-   </section>
+            </aside> */}
+        </div>
+      </section>
     );
   }
 }

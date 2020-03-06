@@ -31,11 +31,11 @@ class Contact extends Component {
           <div className="eight columns">
             <form id="contactFormEn" name="sentMessageEn">
               <fieldset>
-                <div class="row">
-                  <div class="col-md-6">
-                    <div class="form-group">
+                <div className="row">
+                  <div className="col-md-6">
+                    <div className="form-group">
                       <input
-                        class="form-control"
+                        className="form-control"
                         id="nameEn"
                         name="name"
                         type="text"
@@ -43,11 +43,11 @@ class Contact extends Component {
                         required="required"
                         data-validation-required-message="Please enter your name."
                       ></input>
-                      <p class="help-block text-danger"></p>
+                      <p className="help-block text-danger"></p>
                     </div>
-                    <div class="form-group">
+                    <div className="form-group">
                       <input
-                        class="form-control"
+                        className="form-control"
                         id="emailEn"
                         name="email"
                         type="email"
@@ -55,11 +55,11 @@ class Contact extends Component {
                         required="required"
                         data-validation-required-message="Please enter your email address."
                       ></input>
-                      <p class="help-block text-danger"></p>
+                      <p className="help-block text-danger"></p>
                     </div>
-                    <div class="form-group">
+                    <div className="form-group">
                       <input
-                        class="form-control"
+                        className="form-control"
                         id="phoneEn"
                         name="phone"
                         type="tel"
@@ -67,28 +67,28 @@ class Contact extends Component {
                         required="required"
                         data-validation-required-message="Please enter your phone number."
                       ></input>
-                      <p class="help-block text-danger"></p>
+                      <p className="help-block text-danger"></p>
                     </div>
                   </div>
-                  <div class="col-md-6">
-                    <div class="form-group">
+                  <div className="col-md-6">
+                    <div className="form-group">
                       <textarea
-                        class="form-control"
+                        className="form-control"
                         id="messageEn"
                         name="message"
                         placeholder="Your Message *"
                         required="required"
                         data-validation-required-message="Please enter a message."
                       ></textarea>
-                      <p class="help-block text-danger"></p>
+                      <p className="help-block text-danger"></p>
                     </div>
                   </div>
-                  <div class="clearfix"></div>
-                  <div class="col-lg-12 text-center">
+                  <div className="clearfix"></div>
+                  <div className="col-lg-12 text-center">
                     <div id="successEn"></div>
                     <button
                       id="sendMessageButtonEn"
-                      class="btn btn-primary btn-lg"
+                      className="btn btn-primary btn-lg"
                       type="submit"
                     >
                       Send Message

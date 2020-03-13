@@ -18,7 +18,6 @@ class Header extends Component {
     }
 
     return (
-      <HashRouter>
         <header id="home">
           <nav id="nav-wrap">
             <a className="mobile-btn" href="#nav-wrap" title="Show navigation">
@@ -69,7 +68,6 @@ class Header extends Component {
             </a>
           </p>
         </header>
-      </HashRouter>
     );
   }
 }
